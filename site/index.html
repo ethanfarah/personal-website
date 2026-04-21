@@ -3,63 +3,29 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>farah.fyi — under construction</title>
+  <title>farah.fyi — Ethan Farah</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400&family=Newsreader:ital,wght@0,400;1,400&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500&family=Newsreader:ital,wght@0,400;0,500;1,400;1,500&display=swap" />
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
-    html, body {
-      background: #f4efe6;
-      color: #0a0a0a;
-      height: 100%;
-      width: 100%;
-      overflow: hidden;
-    }
-    body {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 2rem;
-    }
-    main {
-      text-align: center;
-      max-width: 36rem;
-    }
-    h1 {
-      font-family: 'Newsreader', Georgia, serif;
-      font-style: italic;
-      font-weight: 400;
-      font-size: clamp(2.5rem, 8vw, 4.5rem);
-      line-height: 1.05;
-      letter-spacing: -0.02em;
-      color: #7c2d12;
-    }
-    p {
-      font-family: 'JetBrains Mono', ui-monospace, monospace;
-      font-size: 0.8rem;
-      font-weight: 300;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      margin-top: 2rem;
-      opacity: 0.55;
-    }
-    .cursor {
-      display: inline-block;
-      width: 0.5ch;
-      background: #7c2d12;
-      animation: blink 1.1s steps(2) infinite;
-      margin-left: 0.15em;
-    }
-    @keyframes blink {
-      50% { opacity: 0; }
-    }
+    html, body { background: #f4efe6; overflow-x: hidden; }
+    a { color: inherit; }
+    ::selection { background: #7c2d1233; }
+    /* hide native scrollbar styling for the tweak panel */
+    ::-webkit-scrollbar { width: 6px; height: 6px; }
+    ::-webkit-scrollbar-track { background: transparent; }
+    ::-webkit-scrollbar-thumb { background: rgba(0,0,0,0.2); border-radius: 3px; }
   </style>
+
+  <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
 </head>
 <body>
-  <main>
-    <h1>under construction<span class="cursor">&nbsp;</span></h1>
-    <p>farah.fyi &middot; back soon</p>
-  </main>
+  <div id="root"></div>
+  <script src="papers.js?v=5"></script>
+  <script type="text/babel" src="arteries.jsx"></script>
+  <script type="text/babel" src="app.jsx"></script>
 </body>
 </html>
